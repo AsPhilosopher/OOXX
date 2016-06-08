@@ -1,3 +1,3 @@
 # OOXX
-SB
+This is a game!
 
