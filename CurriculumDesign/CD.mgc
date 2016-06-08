@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="Main.AudioPlayer" x="174" y="30">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Main.Player" x="244" y="152">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="OOXXGUI.MainJFrame" x="37" y="273">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="OOXXGUI.ChessBoard"
+            endpointName="chessBoard" kind="Simple"/>
+    </Class>
+    <Class name="Service.DoRank" x="232" y="1269">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Service.MyRank"
+            endpointName="myRank" kind="Simple"/>
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="Service.MyRank"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+    </Class>
+    <Class name="OOXXGUI.LJMainJFrame" x="72" y="910">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="OOXXGUI.RJMainJFrame"/>
+        <Association destinationClassName="OOXXGUI.LJChessBoard"
+            endpointName="ljChessBoard" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+    </Class>
+    <Class name="OOXXGUI.RJMainJFrame" x="153" y="733">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="OOXXGUI.MainJFrame"/>
+        <Association destinationClassName="OOXXGUI.RJChessBoard"
+            endpointName="rjChessBoard" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+    </Class>
+    <Class name="OOXXGUI.LJChessBoard" x="745" y="325">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="OOXXGUI.ChessBoard"/>
+        <Association destinationClassName="Service.MyUnits"
+            endpointName="myUnits" kind="Simple"/>
+        <Association destinationClassName="OOXXGUI.LJMainJFrame"
+            endpointName="ljMainJFrame" kind="Simple"/>
+        <Association destinationClassName="OOXXServer.DBstoreResult"
+            endpointName="dBstoreResult" kind="Simple"/>
+        <Communication destinationClassName="Main.Player"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+        <Communication destinationClassName="OOXXGUI.ChessBoard"/>
+        <Communication destinationClassName="OOXXServer.DBstoreResult"/>
+        <Communication destinationClassName="Service.MyUnits"/>
+        <Communication destinationClassName="OOXXServer.powerChess"/>
+    </Class>
+    <Class name="OOXXServer.DBstoreResult" x="1030" y="981">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Service.MyUnits"
+            endpointName="myUnits" kind="Simple"/>
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="Main.Player"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+        <Communication destinationClassName="Service.MyUnits"/>
+    </Class>
+    <Class name="LoginAndRegist.Regist" x="948" y="35">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Service.MyUnits" x="1080" y="718">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="OOXXServer.powerChess" x="696" y="818">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="OOXXGUI.ChessBoard"
+            endpointName="chessBoard" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.ChessBoard"/>
+    </Class>
+    <Class name="Service.getPromptBox" x="426" y="34">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DataBase.DoSQL" x="637" y="34">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Service.MyRank" x="575" y="1312">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="DataBase.DoDataBase" x="542" y="32">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="OOXXGUI.RJChessBoard" x="458" y="1015">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="OOXXGUI.ChessBoard"/>
+        <Association destinationClassName="OOXXGUI.RJMainJFrame"
+            endpointName="rjMainJFrame" kind="Simple"/>
+        <Association destinationClassName="OOXXServer.DBstoreResult"
+            endpointName="dBstoreResult" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+        <Communication destinationClassName="OOXXGUI.ChessBoard"/>
+        <Communication destinationClassName="OOXXServer.DBstoreResult"/>
+        <Communication destinationClassName="OOXXServer.powerChess"/>
+    </Class>
+    <Class name="OOXXGUI.ChessBoard" x="420" y="219">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="OOXXServer.powerChess"
+            endpointName="powerChess" kind="Simple"/>
+        <Association destinationClassName="OOXXGUI.MainJFrame"
+            endpointName="mainJFrame" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+        <Communication destinationClassName="OOXXServer.powerChess"/>
+    </Class>
+    <Class name="Service.ServeLogin" x="440" y="84">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+    </Class>
+    <Class name="Service.ServeRegist" x="446" y="149">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+    </Class>
+    <Class name="Main.Main" x="176" y="149">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="LoginAndRegist.Login"/>
+    </Class>
+    <Class name="OOXXServer.MyTool" x="291" y="33">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="LoginAndRegist.Login" x="765" y="42">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Main.Choose" x="12" y="115">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>

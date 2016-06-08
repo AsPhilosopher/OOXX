@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="DataBase" x="298" y="47"/>
+    <Package name="LoginAndRegist" x="268" y="165">
+        <DependencyLink destination="Service"/>
+        <DependencyLink destination="Main"/>
+    </Package>
+    <Package name="Main" x="209" y="264">
+        <DependencyLink destination="OOXXGUI"/>
+        <DependencyLink destination="LoginAndRegist"/>
+    </Package>
+    <Package name="OOXXGUI" x="427" y="269">
+        <DependencyLink destination="OOXXServer"/>
+        <DependencyLink destination="Service"/>
+        <DependencyLink destination="Main"/>
+    </Package>
+    <Package name="OOXXServer" x="556" y="142">
+        <DependencyLink destination="OOXXGUI"/>
+        <DependencyLink destination="Service"/>
+        <DependencyLink destination="Main"/>
+        <DependencyLink destination="DataBase"/>
+    </Package>
+    <Package name="Service" x="78" y="99">
+        <DependencyLink destination="Main"/>
+        <DependencyLink destination="DataBase"/>
+    </Package>
+</PackageAnalysis>

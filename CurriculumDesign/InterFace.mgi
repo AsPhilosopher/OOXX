@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="Main.Player" x="217" y="58"/>
+    <CommunicationClass name="OOXXGUI.MainJFrame" x="264" y="335">
+        <Association destinationClassName="OOXXGUI.ChessBoard"
+            endpointName="chessBoard" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="Service.DoRank" x="826" y="609">
+        <Association destinationClassName="Service.MyRank"
+            endpointName="myRank" kind="Simple"/>
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="Service.MyRank"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+    </CommunicationClass>
+    <CommunicationClass name="OOXXGUI.LJMainJFrame" x="326" y="418">
+        <Extension destinationClassName="OOXXGUI.RJMainJFrame"/>
+        <Association destinationClassName="OOXXGUI.LJChessBoard"
+            endpointName="ljChessBoard" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+    </CommunicationClass>
+    <CommunicationClass name="OOXXGUI.RJMainJFrame" x="18" y="290">
+        <Extension destinationClassName="OOXXGUI.MainJFrame"/>
+        <Association destinationClassName="OOXXGUI.RJChessBoard"
+            endpointName="rjChessBoard" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+    </CommunicationClass>
+    <CommunicationClass name="OOXXGUI.LJChessBoard" x="-161" y="94">
+        <Extension destinationClassName="OOXXGUI.ChessBoard"/>
+        <Association destinationClassName="Service.MyUnits"
+            endpointName="myUnits" kind="Simple"/>
+        <Association destinationClassName="OOXXGUI.LJMainJFrame"
+            endpointName="ljMainJFrame" kind="Simple"/>
+        <Association destinationClassName="OOXXServer.DBstoreResult"
+            endpointName="dBstoreResult" kind="Simple"/>
+        <Communication destinationClassName="Main.Player"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+        <Communication destinationClassName="OOXXGUI.ChessBoard"/>
+        <Communication destinationClassName="OOXXServer.DBstoreResult"/>
+        <Communication destinationClassName="Service.MyUnits"/>
+        <Communication destinationClassName="OOXXServer.powerChess"/>
+    </CommunicationClass>
+    <CommunicationClass name="OOXXServer.DBstoreResult" x="219" y="877">
+        <Association destinationClassName="Service.MyUnits"
+            endpointName="myUnits" kind="Simple"/>
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="Main.Player"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+        <Communication destinationClassName="Service.MyUnits"/>
+    </CommunicationClass>
+    <CommunicationClass name="LoginAndRegist.Regist" x="380" y="3"/>
+    <CommunicationClass name="Service.MyUnits" x="41" y="567"/>
+    <CommunicationClass name="OOXXServer.powerChess" x="655" y="410">
+        <Association destinationClassName="OOXXGUI.ChessBoard"
+            endpointName="chessBoard" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.ChessBoard"/>
+    </CommunicationClass>
+    <CommunicationClass name="Service.getPromptBox" x="597" y="16"/>
+    <CommunicationClass name="DataBase.DoSQL" x="-35" y="777"/>
+    <CommunicationClass name="Service.MyRank" x="190" y="502"/>
+    <CommunicationClass name="DataBase.DoDataBase" x="514" y="712"/>
+    <CommunicationClass name="OOXXGUI.RJChessBoard" x="-128" y="502">
+        <Extension destinationClassName="OOXXGUI.ChessBoard"/>
+        <Association destinationClassName="OOXXGUI.RJMainJFrame"
+            endpointName="rjMainJFrame" kind="Simple"/>
+        <Association destinationClassName="OOXXServer.DBstoreResult"
+            endpointName="dBstoreResult" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+        <Communication destinationClassName="OOXXGUI.ChessBoard"/>
+        <Communication destinationClassName="OOXXServer.DBstoreResult"/>
+        <Communication destinationClassName="OOXXServer.powerChess"/>
+    </CommunicationClass>
+    <CommunicationClass name="OOXXGUI.ChessBoard" x="610" y="110">
+        <Association destinationClassName="OOXXServer.powerChess"
+            endpointName="powerChess" kind="Simple"/>
+        <Association destinationClassName="OOXXGUI.MainJFrame"
+            endpointName="mainJFrame" kind="Simple"/>
+        <Communication destinationClassName="OOXXGUI.MainJFrame"/>
+        <Communication destinationClassName="OOXXServer.powerChess"/>
+    </CommunicationClass>
+    <CommunicationClass name="Service.ServeLogin" x="-133" y="871">
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+    </CommunicationClass>
+    <CommunicationClass name="Service.ServeRegist" x="-154" y="262">
+        <Communication destinationClassName="DataBase.DoSQL"/>
+        <Communication destinationClassName="DataBase.DoDataBase"/>
+    </CommunicationClass>
+    <CommunicationClass name="Main.Main" x="558" y="270">
+        <Communication destinationClassName="LoginAndRegist.Login"/>
+    </CommunicationClass>
+    <CommunicationClass name="OOXXServer.MyTool" x="481" y="10"/>
+    <CommunicationClass name="LoginAndRegist.Login" x="404" y="348"/>
+    <CommunicationClass name="Main.Choose" x="731" y="17"/>
+</ClassDiagram>
